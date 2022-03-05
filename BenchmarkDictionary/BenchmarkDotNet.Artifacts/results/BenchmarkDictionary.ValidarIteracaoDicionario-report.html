@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>BenchmarkDictionary.ValidarIteracaoDicionario-20220305-104924</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet=v0.13.1, OS=Windows 10.0.19044.1526 (21H2)
+Intel Core i7-8565U CPU 1.80GHz (Whiskey Lake), 1 CPU, 8 logical and 4 physical cores
+.NET SDK=6.0.102
+  [Host]     : .NET 5.0.14 (5.0.1422.5710), X64 RyuJIT
+  DefaultJob : .NET 5.0.14 (5.0.1422.5710), X64 RyuJIT
+</code></pre>
+<pre><code></code></pre>
+
+<table>
+<thead><tr><th>                   Method</th><th>Mean</th><th>Error</th><th>StdDev</th><th>Median</th><th>Rank</th><th>Gen 0</th><th>Allocated</th>
+</tr>
+</thead><tbody><tr><td>SubDictionaryKeyValuePair</td><td>1,528.7 &mu;s</td><td>48.09 &mu;s</td><td>141.79 &mu;s</td><td>1,584.5 &mu;s</td><td>3</td><td>-</td><td>544 B</td>
+</tr><tr><td>SubDictionaryForLoop</td><td>782.4 &mu;s</td><td>15.42 &mu;s</td><td>27.81 &mu;s</td><td>792.8 &mu;s</td><td>1</td><td>-</td><td>496 B</td>
+</tr><tr><td>SubDictionaryParallelEnumerable</td><td>807.4 &mu;s</td><td>16.05 &mu;s</td><td>27.69 &mu;s</td><td>820.7 &mu;s</td><td>2</td><td>5.8594</td><td>22,345 B</td>
+</tr><tr><td>SubDictionaryStringJoin</td><td>780.6 &mu;s</td><td>15.41 &mu;s</td><td>28.94 &mu;s</td><td>792.9 &mu;s</td><td>1</td><td>-</td><td>480 B</td>
+</tr></tbody></table>
+</body>
+</html>
